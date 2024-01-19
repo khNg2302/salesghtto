@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>s3 Hotel Demo</label>
+    <site>
+        <urlPathPrefix>s3hoteldemo</urlPathPrefix>
+    </site>
+    <space>site/s3_Hotel_Demo1</space>
+</DigitalExperienceConfig>

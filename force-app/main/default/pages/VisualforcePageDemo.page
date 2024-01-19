@@ -1,0 +1,18 @@
+<apex:page >
+    <apex:slds />
+    <apex:includeLightning />    
+    <div id="LightningComponentId"/>    
+    <script>
+        $Lightning.use(
+            "c:LightningAppDemo", function() {
+            $Lightning.createComponent(
+                "c:accountList", {},
+                "LightningComponentId",
+                function( component ) {
+                    console.log(
+                        'Web Componenet added in the Visualforce Page'
+                    );
+                });
+        });
+    </script>
+</apex:page>

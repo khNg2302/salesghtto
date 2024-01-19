@@ -1,0 +1,27 @@
+.carousel{
+  display: flex;
+  position: relative;
+  height: 100vh;
+  flex:1
+}
+
+.card-intro-container{
+  width: 20%;
+  aspect-ratio: 9/16;
+  position: absolute;
+  transition: .3s all;
+}
+
+.card-intro-container:nth-child(1){
+  left: 0;
+}
+
+.card-intro-container:nth-child(2){
+ width: 60%;
+ aspect-ratio: 16/9;
+ left:20%
+}
+
+.card-intro-container:nth-child(3){
+  left:80%
+}

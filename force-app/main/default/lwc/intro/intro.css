@@ -1,0 +1,28 @@
+.intro{
+  width: 100%;
+  max-width: 1440px;
+  margin: 2.5rem auto;
+}
+
+.intro__content {
+  width: 100%;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__content_title{
+  font-size: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.intro__content_sub-title{
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro__content_description{
+  margin-bottom: 4rem;
+}

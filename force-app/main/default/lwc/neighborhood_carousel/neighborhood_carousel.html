@@ -1,0 +1,7 @@
+<template>
+    <c-carousel style="width: 100%;" list={list} number_displayed="3" onnext={next} onprev={setDisplayed} onmounted={setDisplayed}>
+      <div class="carousel" lwc:ref="carousel">
+        <c-neighborhood_card_intro class="card-intro-container" for:each={displayed} for:item="item" key={item} image={item.image} title={item.title} content={item.content} intro={item.intro}></c-neighborhood_card_intro>
+      </div>
+    </c-carousel>
+</template>

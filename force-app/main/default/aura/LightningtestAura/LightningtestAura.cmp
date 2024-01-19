@@ -1,0 +1,8 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="greeting" type="String" default="Hello" access="global" />
+    <aura:attribute name="subject" type="String" default="World" access="global" />
+
+    <div>{!v.greeting}, {!v.subject}!
+    <h1>Hello world</h1>
+    </div>
+</aura:component>

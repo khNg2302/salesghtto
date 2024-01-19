@@ -1,0 +1,24 @@
+.hero{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.hero__title{
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero__sub-title{
+  font-size: 1.5rem;
+}
+

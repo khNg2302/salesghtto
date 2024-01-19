@@ -1,0 +1,10 @@
+<template>
+  <section class="intro">
+    <div class="intro__content">
+      <h2 class="intro__content_title" lwc:if={title}>{title}</h2>
+      <p class="intro__content_sub-title" lwc:if={sub_title}>{sub_title}</p>
+      <p class="intro__content_description" lwc:if={description}>{description}</p>
+      <slot></slot>
+    </div>
+  </section>
+</template>
