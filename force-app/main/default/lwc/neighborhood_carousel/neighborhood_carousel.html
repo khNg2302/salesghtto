@@ -1,7 +1,17 @@
 <template>
-    <c-carousel style="width: 100%;" list={list} number_displayed="3" onnext={next} onprev={setDisplayed} onmounted={setDisplayed}>
+    <c-slide_carousel displayed-number="5" list={list} onmounted={mounted} onnext={next} onprev={prev}>
       <div class="carousel" lwc:ref="carousel">
-        <c-neighborhood_card_intro class="card-intro-container" for:each={displayed} for:item="item" key={item} image={item.image} title={item.title} content={item.content} intro={item.intro}></c-neighborhood_card_intro>
+        <article class="card" for:each={displayed} for:item="item" key={item.id}>
+          <figure class="card__image">
+            <div class="card__image-container">
+              <!-- <img class="card__image-img" src={item.image} /> -->
+            </div>
+          </figure>
+          <section class="card__intro">
+            <h3 class="card__intro-title">{item.title}</h3>
+            <p class="card__intro-content">{item.content}</p>
+          </section>
+        </article>
       </div>
-    </c-carousel>
+    </c-slide_carousel>
 </template>

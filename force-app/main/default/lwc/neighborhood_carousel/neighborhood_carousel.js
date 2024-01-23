@@ -2,24 +2,25 @@ import { LightningElement, api } from 'lwc';
 
 export default class Neighborhood_carousel extends LightningElement {
   @api list
-  displayed = []
+  displayed=[]
 
-  getCarouselContent () {
+  returnCarousel(){
     return this.refs.carousel
   }
 
-  setDisplayed (event) {
-    const displayed = event.detail
-    displayed[1]={
-      ...displayed[1],
-      intro:true
-    }
-    this.displayed = displayed
+  mounted(displayed){
+    this.displayed = displayed.detail
   }
 
-  next(event){
-    const carousel = this.getCarouselContent()
+  next(displayed){
+    const carousel = this.returnCarousel()
     carousel.append(carousel.children[0])
-    this.setDisplayed(event)
+    this.displayed = displayed.detail
+  }
+
+  prev(displayed){
+    const carousel = this.returnCarousel()
+    carousel.prepend(carousel.children[displayed.detail.length - 1])
+    this.displayed = displayed.detail
   }
 }
