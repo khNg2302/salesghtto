@@ -5,50 +5,20 @@ export default class Neighborhood_your_story extends LightningElement {
     {
       id:1,
       image:'',
-      title:'KARUIZAWA TALIESIN',
-      content: 'The Karuizawa Taliesin is a great place to enjoy the great outdoors with your family all year round. The facilities surrounding Lake Shiozawa offer a variety of activities for both parents and children to enjoy. For those interested in art, literature, or history, there are plenty of options to choose from. And for those looking for a more active adventure, the lake offers hand-pulled boats, pedal boats, and bicycle-type water striders. The go-cart track and the cycle monorail are also popular attractions. No matter what your interests are, there’s something for everyone at the Karuizawa Taliesin!'
+      title:'TERRY MCKENNA',
+      content: '~ Fascinated by the traditional art of Japan ~ Terry McKenna is an Australian woodblock printmaker living in Karuizawa. As a traditional Japanese woodblock print enthusiast, he trained in Kyoto and is devoted to sharing his skills with others in Japan and around the world.'
     },
     {
       id:2,
       image:'',
-      title:'SHIRAITO FALLS',
-      content: 'You can find the Shiraito Falls in the southwestern foothills of Mount Fuji. The 150 meter wide waterfall is one of Japan’s most beautiful waterfalls. It is fed by the volanco’s springs and flows off the edge of a 20 meter high cliff in thin streams that resemble white silk. There is an easy trail leading to the base of the waterfall just a few minutes from the road.'
+      title:'KARUIZAWA GLASS STUDIO',
+      content: '~ The magic of glass blowing ~ In the Minami Karuizawa area, a five-minute drive from Hotel Indigo Karuizawa, is the Karuizawa Glass Studio of artist Kenji Ito. Here you can enjoy incredible views of Mount Asama. Various hands-on classes are available for everyone from elementary school students to adults, and you can create your own original glass goods. The works of Kenji Ito and other young glass artists are also on display and for sale, so you are sure to find the perfect souvenir.'
     },
     {
       id:3,
       image:'',
-      title:'KUMOBAIKE',
-      content: 'Located on the border between Nagano and Gunma prefectures, the pond commands panoramic views of the three mountains of Jyoshu, the Nikko mountain range, the majestic Mount Asama and Mount Yatsugatake, as well as colorful autumn leaves that spread between the mountains.'
-    },
-    {
-      id:4,
-      image:'',
-      title:'MT. HANAREYAMA',
-      content: 'Mt. Hanareyama is an extinct lava dome and side volcano of Asama Volcano, which some refer to as ‘Table Mountain’ due to its conical shape and flat top. Getting to the top of the mountain takes about an hour, and the path is well-maintained.'
-    },
-    {
-      id:5,
-      image:'',
-      title:'KARUIZAWA TALIESIN 1',
-      content: 'The Karuizawa Taliesin is a great place to enjoy the great outdoors with your family all year round. The facilities surrounding Lake Shiozawa offer a variety of activities for both parents and children to enjoy. For those interested in art, literature, or history, there are plenty of options to choose from. And for those looking for a more active adventure, the lake offers hand-pulled boats, pedal boats, and bicycle-type water striders. The go-cart track and the cycle monorail are also popular attractions. No matter what your interests are, there’s something for everyone at the Karuizawa Taliesin!'
-    },
-    {
-      id:6,
-      image:'',
-      title:'SHIRAITO FALLS 2',
-      content: 'You can find the Shiraito Falls in the southwestern foothills of Mount Fuji. The 150 meter wide waterfall is one of Japan’s most beautiful waterfalls. It is fed by the volanco’s springs and flows off the edge of a 20 meter high cliff in thin streams that resemble white silk. There is an easy trail leading to the base of the waterfall just a few minutes from the road.'
-    },
-    {
-      id:7,
-      image:'',
-      title:'KUMOBAIKE 3',
-      content: 'Located on the border between Nagano and Gunma prefectures, the pond commands panoramic views of the three mountains of Jyoshu, the Nikko mountain range, the majestic Mount Asama and Mount Yatsugatake, as well as colorful autumn leaves that spread between the mountains.'
-    },
-    {
-      id:8,
-      image:'',
-      title:'MT. HANAREYAMA 4',
-      content: 'Mt. Hanareyama is an extinct lava dome and side volcano of Asama Volcano, which some refer to as ‘Table Mountain’ due to its conical shape and flat top. Getting to the top of the mountain takes about an hour, and the path is well-maintained.'
+      title:'BICYCLE RENTAL',
+      content: '~Strolling in the Hotel’s Neighborhood~ We have begun offering bicycle rentals so that visitors can enjoy sightseeing in the lush, nature-rich Karuizawa area. We have prepared six bicycles by Louis Garneau, a Canadian company whose brand philosophy is “artistic bicycles for people who color the city.”'
     }
   ]
 }

@@ -3,15 +3,33 @@ import { LightningElement, api } from 'lwc';
 export default class Carousel extends LightningElement {
   @api list
   @api number_displayed
+  @api per_change_number
   lastIndex
-  displayedButton
   centerIndex
+  timer = null
 
+  async debounceSlide(callback){
+    if(this.timer) await this.timer
+    this.timer = setTimeout(()=>{
+      callback()
+      clearInterval(this.timer)
+    },300)
+  }
+
+  fillList(){
+    if(this.list.length < this.number_displayed){
+      const initialList = [...this.list]
+      for(let i = 1; i < +this.number_displayed / this.list.length; i++){
+        this.list = [...this.list,...initialList]
+      }
+    }
+  }
   connectedCallback(){
+    this.fillList()
     this.lastIndex = +this.number_displayed
+    this.per_change_number = +this.per_change_number
     this.calcCenterIndexes()
     this.dispatchEvent(this.newEvent('mounted',{detail:this.returnDisplayedData()}))
-    this.displayedButton = this.list.length >= this.number_displayed
   }
 
   newEvent(nameEvent, detail){
@@ -29,8 +47,9 @@ export default class Carousel extends LightningElement {
   specifyElement(index, element){
     if(this.centerIndex.includes(index+1)){
       return {...element, isCenter: true}
-    }  
-    return element  
+    }
+
+    return element
   }
 
   returnCircleDisplayedData() {
@@ -55,13 +74,17 @@ export default class Carousel extends LightningElement {
     }
   }
 
-  next(){
-    this.lastIndex = this.lastIndex === this.list.length ? 1 : +this.lastIndex + 1
+  nextCallback(){
+    this.lastIndex = this.lastIndex === this.list.length ? this.per_change_number : +this.lastIndex + this.per_change_number
     this.dispatchEvent(this.newEvent('next',{detail:this.returnDisplayedData()})) 
   }
 
+  next(){
+    this.debounceSlide(this.nextCallback)
+  }
+
   prev(){
-    this.lastIndex =  this.lastIndex === 1 ? this.list.length : +this.lastIndex - 1
+    this.lastIndex =  this.lastIndex === this.per_change_number ? this.list.length : +this.lastIndex - this.per_change_number
     this.dispatchEvent(this.newEvent('prev',{detail:this.returnDisplayedData()}))
   }
 }

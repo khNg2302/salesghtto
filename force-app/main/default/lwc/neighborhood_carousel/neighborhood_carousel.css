@@ -1,29 +1,15 @@
 .carousel{
   display: flex;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   flex:1;
   overflow: hidden;
-}
-
-.card{
-  flex:1;
-  transition: .5s;
 }
 
 .card__image{
   aspect-ratio: 16/9;
   width: 100%;
   color: gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card__image-container{
-  transition: .5s all;
-  width: 80%;
-  aspect-ratio: 16/9;
   background-color:ghostwhite;
 }
 
@@ -34,12 +20,28 @@
 .card__intro{
   position: relative;
   width: 80%;
-  transform: scale(.9);
   margin: 0 auto;
   transform-origin: center;
   transition: .5s all;
   opacity: 0;
   background-color: #96c0b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem;
+  bottom: 15%
+}
+
+.card__intro-title{
+  color: #012a23;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.card__intro-content{
+  color: white;
+  font-weight: 500;
 }
 
 .card{
@@ -47,7 +49,7 @@
   aspect-ratio: 16/9;
   position: absolute;
   transition: .5s all;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(.8);
 }
 
 .card:nth-child(1){
@@ -65,11 +67,10 @@
 
 .card:nth-child(3) .card__intro{
   opacity: 1;
-  transform: scale(1);
 }
 
-.card:nth-child(3) .card__image-container{
-  width: 100%;
+.card:nth-child(3){
+  transform: translateX(-50%) scale(1);
 }
 
 .card:nth-child(4){

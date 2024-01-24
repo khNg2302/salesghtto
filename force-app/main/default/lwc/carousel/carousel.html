@@ -1,8 +1,8 @@
 <template>
   <div class="carousel">
-    <lightning-button-icon name="chevronleft" onclick={prev} if:true={displayedButton}></lightning-button-icon>
+    <lightning-button-icon name="chevronleft" onclick={prev}></lightning-button-icon>
       <slot></slot>
-    <lightning-button-icon name="chevronright" onclick={next} if:true={displayedButton}></lightning-button-icon>
+    <lightning-button-icon name="chevronright" onclick={next}></lightning-button-icon>
   </div>
     
 </template>
