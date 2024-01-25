@@ -3,7 +3,7 @@
       <div class="carousel" lwc:ref="carousel">
         <article class="card" for:each={displayed} for:item="item" key={item.id}>
           <figure class="card__image">
-            <!-- <img class="card__image-img" src={item.image} /> -->
+            <img class="card__image-img" src={item.image} />
           </figure>
           <section class="card__intro">
             <h3 class="card__intro-title">{item.title}</h3>

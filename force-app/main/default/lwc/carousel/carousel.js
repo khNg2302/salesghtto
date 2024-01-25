@@ -6,15 +6,6 @@ export default class Carousel extends LightningElement {
   @api per_change_number
   lastIndex
   centerIndex
-  timer = null
-
-  async debounceSlide(callback){
-    if(this.timer) await this.timer
-    this.timer = setTimeout(()=>{
-      callback()
-      clearInterval(this.timer)
-    },300)
-  }
 
   fillList(){
     if(this.list.length < this.number_displayed){
@@ -74,13 +65,9 @@ export default class Carousel extends LightningElement {
     }
   }
 
-  nextCallback(){
+  next(){
     this.lastIndex = this.lastIndex === this.list.length ? this.per_change_number : +this.lastIndex + this.per_change_number
     this.dispatchEvent(this.newEvent('next',{detail:this.returnDisplayedData()})) 
-  }
-
-  next(){
-    this.debounceSlide(this.nextCallback)
   }
 
   prev(){
