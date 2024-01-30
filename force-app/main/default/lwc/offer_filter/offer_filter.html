@@ -1,0 +1,5 @@
+<template>
+    <c-tab tabs={tabs} change-tab-func={changeTabFunc} onchangetab={handleChangeTab}>
+        <c-offer_card_content for:each={tabContents} for:item="content" key={content.link_detail} image={content.image} title={image.title} description={content.description}></c-offer_card_content>
+    </c-tab>
+</template>

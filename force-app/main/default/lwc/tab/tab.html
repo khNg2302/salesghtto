@@ -1,0 +1,8 @@
+<template>
+    <div class="filter">
+        <span class="filter__item" data-slug={tab.slug} data-tab_title={tab.tabTitle} for:each={tabs} for:item="tab" key={tab.slug} onclick={changeTab}>
+            {tab.label}
+        </span>
+    </div>
+    <slot></slot>
+</template>
